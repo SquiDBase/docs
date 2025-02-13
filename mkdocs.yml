@@ -1,4 +1,33 @@
 site_name: SquiDBase Docs
-site_url: https://squidbase.github.io/docs
+site_url: https://ominous-couscous-q9v464gpw66h9jw4-8000.app.github.dev/docs/
+repo_url: https://github.com/SquiDBase/docs
+
 theme:
   name: material
+  logo: assets/logo.png
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: blue 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+extra_css:
+  - stylesheets/extra.css
