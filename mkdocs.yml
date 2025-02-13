@@ -1,0 +1,4 @@
+site_name: SquiDBase Docs
+site_url: https://squidbase.github.io/docs
+theme:
+  name: material
