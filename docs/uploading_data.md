@@ -45,16 +45,56 @@ A **template CSV file** is available for download: [Download Template](assets/fu
 | file4.pod5  | SARS-CoV-2_A  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | NA             |
 | file5.pod5  | SARS-CoV-2_B  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | NA             |
 
+### Upload Interface in SquiDBase
+
+After logging in to SquiDBase, you can access the [Submit page](https://squidbase.org/submissions/submit).  
+
+On this page, you will need to:  
+1. Fill in your **contact details**  
+2. Provide a **short description** of your dataset  
+3. Upload a **Samplesheet CSV file** containing metadata for your POD5 files  
+
+![Dataset submission](assets/dataset_submission.png)  
+/// caption
+Dataset submission page in SquiDBase.
+///
+---
+
+### Uploading POD5 Files  
+
+Below the metadata submission section, you will find an area to upload your **POD5 files**, as shown in the image below.  
+
+Once both the **CSV metadata file** and the **POD5 files** are uploaded, SquiDBase will perform basic validation checks, such as:  
+
+- Ensuring that all **filenames in the CSV match** the uploaded POD5 files  
+- Checking for potential formatting issues  
+
+If no errors are detected, you can proceed by clicking the **Upload** button.  
+
+![POD5 upload](assets/upload_pod5.png)
+/// caption
+POD5 upload section.
+///
+---
+
+### Making Your Data Public  
+
+Once your data is uploaded, you will have the option to:  
+
+- **Immediately make your dataset publicly available**  
+- **Keep the dataset private** and enable the **"public" toggle** later when you are ready to share it (e.g., after your publication is under peer review)  
+
 ---
 
 ## Upload of mixed datasets – running SquiDPipe 
 
 Many **Nanopore sequencing runs**, particularly those involving barcoded samples with multiple microbial or viral species, **contain mixed species per POD5 file**.  
 
-To handle this, use **SquiDPipe**, an **extflow pipeline** designed to process barcoded runs, including **FASTQ files**. It will:  
+To handle this, use **SquiDPipe**, a **Nextflow pipeline** designed to process barcoded runs, including **FASTQ files**. It will:  
 
 - Classify reads based on the **basecalled sequences**  
-- Automatically **separate POD5 files** by species  
+- Automatically **separate POD5 files** by species
+- Output a CSV for uploading to SquiDBase that matches the outputted POD5 filenames
 
 For instructions on running **SquiDPipe**, visit:  
 [**SquiDPipe GitHub Repository**](https://github.com/Cuypers-Wim/squidpipe)
