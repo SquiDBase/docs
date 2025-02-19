@@ -7,18 +7,20 @@ On the [Browse Datasets](https://squidbase.org/submissions) page, you can explor
 The 'Browse Datasets' page in SquiDBase.
 ///
 
-
-## Filtering for sequencing chemistry use
-
-
-
 ## Manual download 
 
-SquiDBase ([squidbase.org](https://squidbase.org/)) is a dedicated database for storing and sharing raw nanopore sequencing data from microbial and viral research projects. By providing a centralized platform, SquiDBase improves data accessibility and encourages its reuse, fostering experimental research and the development of innovative analytical methods.
+Once you have identified which datasets, each accompanied by a unique SquiDBase (SQB) identifier, you can click on the identifier and a page specific to this dataset will open. 
 
-This guide will help you navigate how to use SquiDBase for retrieving and uploading data. We encourage contributions and are more than happy to assist with data uploads—feel free to reach out to us at ([squidbase@uantwerpen.be](mailto:squidbase@uantwerpen.be))
+Each page, for example this entry [SQB000004](https://squidbase.org/submissions/SQB000004), will show an info field, a summary of the metadata, dataset sender details, and eventually the dataset files which are available for download. You can simply retrieve them by clicking the download button.
 
-Please also review our [Terms & Conditions].
+![Download section](download.png)
+/// caption
+Download section of a SquiDBase entry.
+///
+
+### About the data files
+
+Note that all raw data in SquiDBase is currently in the POD5 format, also legacy R9 data which has been converted from FAST5 to POD5. Each data file consists reads that 
 
 ## Download links
 
