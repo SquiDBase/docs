@@ -28,10 +28,34 @@ If your data has already been filtered (i.e., **each POD5 file contains reads fr
 2. A **CSV file with the corresponding metadata**  
 
 ### Metadata CSV File Format
+Each dataset uploaded to SquiDBase must be accompanied by a **metadata/samplesheet CSV file**. This file provides essential information about the samples and ensures proper indexing and retrieval.
 
-Your metadata CSV file should follow the format below. If any metadata is missing, enter **"NA"** in the respective field.  
+General guidelines:
 
-**Accepted delimiters:** `,` and `;`  
+- The metadata file should be in **CSV format** (`.csv`).
+- Missing values should be filled with **"NA"** (not left empty).
+- Both **comma (`,`)** and **semicolon (`;`)** delimiters are accepted.
+- Each row in the file represents **one POD5 file** and its corresponding metadata.
+- Metadata **cannot be modified after upload**, except for the `remarks` field.
+
+## Metadata Fields
+
+The table below details the required fields in the metadata file, including their descriptions, expected data types, and example values.
+
+| **Column Name**       | **Description**                                                                                                                                 |**Data Type**           | **Example Value**              |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------------------|
+| `filename`           | The filename of the POD5 sequencing data to be uploaded.                                                                                         | String                  | `37124_CHIKV-1.pod5`          |
+| `species_taxid`      | NCBI taxonomy identifier for the microbial species in the sample.                                                                               | NCBI taxonomy           | `37124`                        |
+| `year_of_isolation`  | The year the pathogen or microbial/viral species was isolated.                                                                                                             | Integer                 | `2014`                         |
+| `country_of_isolation` | The ISO 3166 country code indicating where the pathogen was isolated.                                                                        | ISO 3166 country code   | `BE`                |
+| `geographic_origin`  | The geographic origin of the pathogen, if available. Can differ from `country_of_isolation` (e.g., in cases of imported infections).             | ISO 3166 country code   | `ET`           |
+| `strain_lineage`     | The specific strain, lineage, or sequence type of the uploaded pathogen data.                                                                   | String                  | `BA.5`                         |
+| `source_id`         | A unique identifier for the source of the pathogen sample, using the UBERON ontology.                                                           | UBERON ontology         | `UBERON:_0000178`              |
+| `host_taxid`        | NCBI taxonomy identifier for the host species from which the pathogen was isolated, if applicable.                                             | NCBI taxonomy           | `9606`         |
+| `internal_lab_id`    | Internal identification code assigned to the sample by the laboratory.                                                                          | String                  | `PLAS-ETH-2023-0147`           |
+| `diagnostic_method_id` | The diagnostic method used to detect the pathogen, using the OBI ontology.                                                                 | OBI ontology            | `OBI:_0003045`                 |
+| `remarks`           | Additional notes or remarks about the sample, often for internal collection records.                                                             | Text field              | `"Strain donated by institute X."` |
+
 
 A **template CSV file** is available for download: [Download Template](assets/full.csv).  
 
@@ -44,6 +68,9 @@ A **template CSV file** is available for download: [Download Template](assets/fu
 | file3.pod5  | ZIKV          | 64320        | 11053             | 2015               | BE             | ID           | NA       | NA        | NA             | NA                | NA             |
 | file4.pod5  | SARS-CoV-2_A  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | NA             |
 | file5.pod5  | SARS-CoV-2_B  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | NA             |
+
+
+
 
 ### Upload Interface in SquiDBase
 
