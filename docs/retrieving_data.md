@@ -20,7 +20,11 @@ Download section of a SquiDBase entry.
 
 ### About the data files
 
-Note that all raw data in SquiDBase is currently in the POD5 format, also legacy R9 data which has been converted from FAST5 to POD5. Each data file consists reads that 
+All raw data in SquiDBase is stored in the POD5 format, including legacy R9 data, which has been converted from FAST5 to POD5. Each POD5 file contains reads from a single species only.
+
+## Download all option
+
+Coming soon!
 
 ## Download links
 

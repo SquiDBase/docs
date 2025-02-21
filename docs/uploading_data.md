@@ -1,4 +1,4 @@
-# Uploading Data to SquiDBase
+# Uploading data to SquiDBase
 
 Before uploading data to SquiDBase, you need to create an account. This ensures that each dataset is linked to a submitter and a principal investigator (PI) or responsible person.  
 
@@ -38,7 +38,7 @@ General guidelines:
 - Each row in the file represents **one POD5 file** and its corresponding metadata.
 - Metadata **cannot be modified after upload**, except for the `remarks` field.
 
-## Metadata Fields
+### Metadata Fields
 
 The table below details the required fields in the metadata file, including their descriptions, expected data types, and example values.
 
@@ -85,7 +85,6 @@ On this page, you will need to:
 /// caption
 Dataset submission page in SquiDBase.
 ///
----
 
 ### Uploading POD5 Files  
 
@@ -102,7 +101,7 @@ If no errors are detected, you can proceed by clicking the **Upload** button.
 /// caption
 POD5 upload section.
 ///
----
+
 
 ### Making Your Data Public  
 
