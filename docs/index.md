@@ -7,7 +7,7 @@ This guide will help you navigate how to use SquiDBase for retrieving and upload
 
 # Terms and conditions
 
-Please also review our [Terms & Conditions].
+Please also review our [Terms & Conditions](https://squidbase.org/policy/terms).
 
 # Acknowledgements & citation
 
