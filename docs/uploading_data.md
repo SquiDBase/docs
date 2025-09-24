@@ -16,7 +16,7 @@ Before proceeding with your upload, please ensure that your data meets the follo
 
 Once your data meets these criteria, you have two options:
 1. If each POD5 file contains only one biological species, you can proceed with the [upload process filtered data](#upload-when-data-is-already-filtered).  
-2. Alternatively, if your dataset contains a mix of viral or microbial species, you can **filter out POD5 reads per species** using **SquiDPipe**, a dedicated pipeline designed for this purpose. These steps are explained under [upload process mixed data](#upload-of-mixed-datasets-–-running-squidpipe)
+2. Alternatively, if your dataset contains a mix of viral or microbial species, you can **filter out POD5 reads per species** using **SquiDPipe**, a dedicated pipeline designed for this purpose. These steps are explained under [upload process mixed data](#upload-of-mixed-datasets-running-squidpipe)
 
 ---
 
@@ -29,6 +29,13 @@ If your data has already been filtered (i.e., **each POD5 file contains reads fr
 
 ### Metadata CSV File Format
 Each dataset uploaded to SquiDBase must be accompanied by a **metadata/samplesheet CSV file**. This file provides essential information about the samples and ensures proper indexing and retrieval.
+
+**Recent Updates**: SquiDBase now includes three new metadata fields to provide more detailed information about sequencing protocols:
+- **Library Source** (`library_source_id`) - Source material type
+- **DNA Input Type** (`dna_input_type_id`) - Sample preparation method  
+- **Target Scope** (`target_scope_id`) - Sequencing strategy
+
+These fields are **optional for existing users** but recommended for new submissions to enhance data discoverability and reuse.
 
 General guidelines:
 
@@ -54,20 +61,67 @@ The table below details the required fields in the metadata file, including thei
 | `host_taxid`        | NCBI taxonomy identifier for the host species from which the pathogen was isolated, if applicable.                                             | NCBI taxonomy           | `9606`         |
 | `internal_lab_id`    | Internal identification code assigned to the sample by the laboratory.                                                                          | String                  | `PLAS-ETH-2023-0147`           |
 | `diagnostic_method_id` | The diagnostic method used to detect the pathogen, using the OBI ontology.                                                                 | OBI ontology            | `OBI:_0003045`                 |
+| `library_source_id`   | Describes the source material of the DNA/RNA being sequenced. Options include: genomic, single_cell_genomic, transcriptomic, single_cell_transcriptomic, metagenomic, viral_rna, plasmid, other. | Controlled vocabulary | `viral_rna`                    |
+| `dna_input_type_id`   | Describes how the DNA/RNA was prepared or amplified before sequencing. Options include: native, pcr, amplicon, random_pcr, rt_pcr, cDNA, swga, mda, hybrid_capture, probe_capture, chip, other. | Controlled vocabulary | `rt_pcr`                       |
+| `target_scope_id`     | Describes the sequencing strategy or what part of the genome is targeted. Options include: whole_genome, whole_genome_wga, amplicon, exome, transcriptome, small_rna, chip, targeted, plasmid, other. | Controlled vocabulary | `whole_genome`                 |
 | `remarks`           | Additional notes or remarks about the sample, often for internal collection records.                                                             | Text field              | `"Strain donated by institute X."` |
+
+#### New Metadata Fields - Detailed Information
+
+**Library Source (`library_source_id`)**  
+This field describes the source material of the DNA/RNA being sequenced:
+
+- `genomic` - DNA extracted from genomic material of an organism
+- `single_cell_genomic` - DNA extracted from a single cell
+- `transcriptomic` - RNA converted to cDNA for sequencing
+- `single_cell_transcriptomic` - RNA converted to cDNA from a single cell
+- `metagenomic` - DNA extracted from a mixed community of organisms
+- `viral_rna` - Viral RNA genome, sequenced as cDNA
+- `plasmid` - Circular plasmid DNA sequenced separately
+- `other` - Source material not covered by the above categories
+
+**DNA Input Type (`dna_input_type_id`)**  
+This field describes how the DNA/RNA was prepared or amplified before sequencing:
+
+- `native` - Genomic DNA sequenced without amplification
+- `pcr` - DNA amplified by PCR without specific locus targeting
+- `amplicon` - PCR amplicons targeting specific loci
+- `random_pcr` - Random priming followed by PCR amplification
+- `rt_pcr` - Reverse transcription followed by PCR amplification of RNA
+- `cDNA` - Complementary DNA synthesized from RNA
+- `swga` - Selective whole-genome amplification of microbial DNA
+- `mda` - Multiple displacement amplification
+- `hybrid_capture` - Target enrichment via hybridization probes
+- `probe_capture` - Probe-based capture of targeted sequences
+- `chip` - DNA fragments enriched by chromatin immunoprecipitation
+- `other` - Selection method not covered above
+
+**Target Scope (`target_scope_id`)**  
+This field describes the sequencing strategy or what part of the genome is targeted:
+
+- `whole_genome` - Random sequencing across the entire genome
+- `whole_genome_wga` - Whole-genome sequencing after amplification
+- `amplicon` - Sequencing of PCR amplicons
+- `exome` - Sequencing of captured exons
+- `transcriptome` - Sequencing of cDNA from RNA
+- `small_rna` - Sequencing of small RNAs such as miRNA
+- `chip` - Sequencing of DNA fragments from ChIP enrichment
+- `targeted` - Sequencing of enriched panels or probe-captured regions
+- `plasmid` - Sequencing focused on plasmids or small replicons
+- `other` - Strategy not covered above
 
 
 A **template CSV file** is available for download: [Download Template](assets/full.csv).  
 
 #### Example Metadata Format  
 
-| filename   | species_name    | species_taxid | year_of_isolation | country_of_isolation | geographic_origin | strain_lineage | source_id | host_taxid | internal_lab_id | diagnostic_method_id | remarks         |
-|------------|---------------|--------------|-------------------|--------------------|----------------|--------------|----------|-----------|----------------|-------------------|----------------|
-| file1.pod5  | DENV          | 11053        | 2014              | NA                 | NA             | ECSA         | NA       | NA        | NA             | NA                | ITM collection |
-| file2.pod5  | HIV           | 11676        | 2015              | BE                 | NI             | ECSA         | NA       | NA        | NA             | NA                | ITM collection |
-| file3.pod5  | ZIKV          | 64320        | 11053             | 2015               | BE             | ID           | NA       | NA        | NA             | NA                | NA             |
-| file4.pod5  | SARS-CoV-2_A  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | NA             |
-| file5.pod5  | SARS-CoV-2_B  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | NA             |
+| filename   | species_name    | species_taxid | year_of_isolation | country_of_isolation | geographic_origin | strain_lineage | source_id | host_taxid | internal_lab_id | diagnostic_method_id | library_source_id | dna_input_type_id | target_scope_id | remarks         |
+|------------|---------------|--------------|-------------------|--------------------|----------------|--------------|----------|-----------|----------------|-------------------|------------------|------------------|----------------|----------------|
+| file1.pod5  | DENV          | 11053        | 2014              | NA                 | NA             | ECSA         | NA       | NA        | NA             | NA                | viral_rna        | rt_pcr           | transcriptome  | ITM collection |
+| file2.pod5  | HIV           | 11676        | 2015              | BE                 | NI             | ECSA         | NA       | NA        | NA             | NA                | viral_rna        | rt_pcr           | whole_genome   | ITM collection |
+| file3.pod5  | ZIKV          | 64320        | 11053             | 2015               | BE             | ID           | NA       | NA        | NA             | NA                | viral_rna        | cDNA             | transcriptome  | NA             |
+| file4.pod5  | SARS-CoV-2_A  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | viral_rna        | rt_pcr           | whole_genome   | NA             |
+| file5.pod5  | SARS-CoV-2_B  | 2697049      | 11060             | 2018               | BE             | PE           | NA       | NA        | NA             | NA                | genomic          | native           | whole_genome   | NA             |
 
 
 

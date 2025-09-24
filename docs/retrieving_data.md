@@ -13,7 +13,7 @@ Once you have identified which datasets, each accompanied by a unique SquiDBase 
 
 Each page, for example this entry [SQB000004](https://squidbase.org/submissions/SQB000004), will show an info field, a summary of the metadata, dataset sender details, and eventually the dataset files which are available for download. You can simply retrieve them by clicking the download button.
 
-![Download section](download.png)
+![Download section](assets/download.png)
 /// caption
 Download section of a SquiDBase entry.
 ///
