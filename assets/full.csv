@@ -1,0 +1,6 @@
+﻿filename;species_name;species_taxid;year_of_isolation;country_of_isolation;geographic_origin;strain_lineage;source_id;host_taxid;internal_lab_id;diagnostic_method_id;library_source_id;dna_input_type_id;target_scope_id;remarks
+barcode01.pod5;DENV;11053;2014;NA;NA;ECSA;NA;NA;NA;NA;viral_rna;rt_pcr;transcriptome;ITM collection
+barcode02.pod5;HIV;11676;2015;BE;NI;ECSA;NA;NA;NA;NA;viral_rna;rt_pcr;whole_genome;ITM collection
+barcode03.pod5;ZIKV;64320;2015;BE;ID;NA;NA;NA;NA;NA;viral_rna;cDNA;transcriptome;ITM collection
+barcode04.pod5;SARS-CoV-2_A;2697049;2018;BE;PE;NA;NA;NA;NA;NA;viral_rna;rt_pcr;whole_genome;ITM collection
+barcode05.pod5;SARS-CoV-2_B;2697049;2018;BE;PE;NA;NA;NA;NA;NA;genomic;native;whole_genome;ITM collection

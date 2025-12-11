@@ -1,0 +1,1066 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ominous-couscous-q9v464gpw66h9jw4-8000.app.github.dev/docs/uploading_data/">
+      
+      
+        <link rel="prev" href="../retrieving_data/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Uploading data to SquiDBase - SquiDBase Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uploading-data-to-squidbase" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SquiDBase Docs" class="md-header__button md-logo" aria-label="SquiDBase Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SquiDBase Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Uploading data to SquiDBase
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SquiDBase/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SquiDBase Docs" class="md-nav__button md-logo" aria-label="SquiDBase Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    SquiDBase Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SquiDBase/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retrieving_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieving data from SquiDBase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading data to SquiDBase
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading data to SquiDBase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-before-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist before upload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-when-data-is-already-filtered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload when data is already filtered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload when data is already filtered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadata-csv-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata CSV File Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata Fields
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-metadata-fields-detailed-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Metadata Fields - Detailed Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-metadata-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Metadata Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-interface-in-squidbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload Interface in SquiDBase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-pod5-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uploading POD5 Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-your-data-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making Your Data Public
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-of-mixed-datasets-running-squidpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload of mixed datasets – running SquiDPipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-before-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist before upload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-when-data-is-already-filtered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload when data is already filtered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload when data is already filtered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadata-csv-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata CSV File Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata Fields
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-metadata-fields-detailed-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Metadata Fields - Detailed Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-metadata-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Metadata Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-interface-in-squidbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload Interface in SquiDBase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-pod5-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uploading POD5 Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-your-data-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making Your Data Public
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-of-mixed-datasets-running-squidpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload of mixed datasets – running SquiDPipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="uploading-data-to-squidbase">Uploading data to SquiDBase</h1>
+<p>Before uploading data to SquiDBase, you need to create an account. This ensures that each dataset is linked to a submitter and a principal investigator (PI) or responsible person.  </p>
+<p>You can sign up directly <a href="https://squidbase.org/account/register">here</a> or visit the SquiDBase website, click <strong>"Sign in"</strong> in the top-right corner, and select <strong>"Sign up here"</strong>.</p>
+<hr />
+<h2 id="checklist-before-upload">Checklist before upload</h2>
+<p>Before proceeding with your upload, please ensure that your data meets the following requirements:</p>
+<ul>
+<li>The data must be of <strong>microbial or viral origin</strong> and <strong>must not contain human data</strong> to comply with privacy regulations. Metadata must also be free of patient-identifiable information.  </li>
+<li>Each upload should originate from <strong>a single Nanopore sequencing chemistry</strong>. This information is automatically extracted from your <strong>POD5</strong> files during upload.  </li>
+<li>Metadata should be as complete as possible. <strong>Once uploaded, metadata cannot be modified</strong>, except for the <strong>info field</strong>, which remains editable.  </li>
+</ul>
+<p>Once your data meets these criteria, you have two options:
+1. If each POD5 file contains only one biological species, you can proceed with the <a href="#upload-when-data-is-already-filtered">upload process filtered data</a>.<br />
+2. Alternatively, if your dataset contains a mix of viral or microbial species, you can <strong>filter out POD5 reads per species</strong> using <strong>SquiDPipe</strong>, a dedicated pipeline designed for this purpose. These steps are explained under <a href="#upload-of-mixed-datasets-running-squidpipe">upload process mixed data</a></p>
+<hr />
+<h2 id="upload-when-data-is-already-filtered">Upload when data is already filtered</h2>
+<p>If your data has already been filtered (i.e., <strong>each POD5 file contains reads from only one microbial or viral species</strong>), you only need to upload:  </p>
+<ol>
+<li>The <strong>POD5 files</strong>  </li>
+<li>A <strong>CSV file with the corresponding metadata</strong>  </li>
+</ol>
+<h3 id="metadata-csv-file-format">Metadata CSV File Format</h3>
+<p>Each dataset uploaded to SquiDBase must be accompanied by a <strong>metadata/samplesheet CSV file</strong>. This file provides essential information about the samples and ensures proper indexing and retrieval.</p>
+<p><strong>Recent Updates</strong>: SquiDBase now includes three new metadata fields to provide more detailed information about sequencing protocols:
+- <strong>Library Source</strong> (<code>library_source_id</code>) - Source material type
+- <strong>DNA Input Type</strong> (<code>dna_input_type_id</code>) - Sample preparation method<br />
+- <strong>Target Scope</strong> (<code>target_scope_id</code>) - Sequencing strategy</p>
+<p>These fields are <strong>optional for existing users</strong> but recommended for new submissions to enhance data discoverability and reuse.</p>
+<p>General guidelines:</p>
+<ul>
+<li>The metadata file should be in <strong>CSV format</strong> (<code>.csv</code>).</li>
+<li>Missing values should be filled with <strong>"NA"</strong> (not left empty).</li>
+<li>Both <strong>comma (<code>,</code>)</strong> and <strong>semicolon (<code>;</code>)</strong> delimiters are accepted.</li>
+<li>Each row in the file represents <strong>one POD5 file</strong> and its corresponding metadata.</li>
+<li>Metadata <strong>cannot be modified after upload</strong>, except for the <code>remarks</code> field.</li>
+</ul>
+<h3 id="metadata-fields">Metadata Fields</h3>
+<p>The table below details the required fields in the metadata file, including their descriptions, expected data types, and example values.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Column Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Example Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filename</code></td>
+<td>The filename of the POD5 sequencing data to be uploaded.</td>
+<td>String</td>
+<td><code>37124_CHIKV-1.pod5</code></td>
+</tr>
+<tr>
+<td><code>species_taxid</code></td>
+<td>NCBI taxonomy identifier for the microbial species in the sample.</td>
+<td>NCBI taxonomy</td>
+<td><code>37124</code></td>
+</tr>
+<tr>
+<td><code>year_of_isolation</code></td>
+<td>The year the pathogen or microbial/viral species was isolated.</td>
+<td>Integer</td>
+<td><code>2014</code></td>
+</tr>
+<tr>
+<td><code>country_of_isolation</code></td>
+<td>The ISO 3166 country code indicating where the pathogen was isolated.</td>
+<td>ISO 3166 country code</td>
+<td><code>BE</code></td>
+</tr>
+<tr>
+<td><code>geographic_origin</code></td>
+<td>The geographic origin of the pathogen, if available. Can differ from <code>country_of_isolation</code> (e.g., in cases of imported infections).</td>
+<td>ISO 3166 country code</td>
+<td><code>ET</code></td>
+</tr>
+<tr>
+<td><code>strain_lineage</code></td>
+<td>The specific strain, lineage, or sequence type of the uploaded pathogen data.</td>
+<td>String</td>
+<td><code>BA.5</code></td>
+</tr>
+<tr>
+<td><code>source_id</code></td>
+<td>A unique identifier for the source of the pathogen sample, using the UBERON ontology.</td>
+<td>UBERON ontology</td>
+<td><code>UBERON:_0000178</code></td>
+</tr>
+<tr>
+<td><code>host_taxid</code></td>
+<td>NCBI taxonomy identifier for the host species from which the pathogen was isolated, if applicable.</td>
+<td>NCBI taxonomy</td>
+<td><code>9606</code></td>
+</tr>
+<tr>
+<td><code>internal_lab_id</code></td>
+<td>Internal identification code assigned to the sample by the laboratory.</td>
+<td>String</td>
+<td><code>PLAS-ETH-2023-0147</code></td>
+</tr>
+<tr>
+<td><code>diagnostic_method_id</code></td>
+<td>The diagnostic method used to detect the pathogen, using the OBI ontology.</td>
+<td>OBI ontology</td>
+<td><code>OBI:_0003045</code></td>
+</tr>
+<tr>
+<td><code>library_source_id</code></td>
+<td>Describes the source material of the DNA/RNA being sequenced. Options include: genomic, single_cell_genomic, transcriptomic, single_cell_transcriptomic, metagenomic, viral_rna, plasmid, other.</td>
+<td>Controlled vocabulary</td>
+<td><code>viral_rna</code></td>
+</tr>
+<tr>
+<td><code>dna_input_type_id</code></td>
+<td>Describes how the DNA/RNA was prepared or amplified before sequencing. Options include: native, pcr, amplicon, random_pcr, rt_pcr, cDNA, swga, mda, hybrid_capture, probe_capture, chip, other.</td>
+<td>Controlled vocabulary</td>
+<td><code>rt_pcr</code></td>
+</tr>
+<tr>
+<td><code>target_scope_id</code></td>
+<td>Describes the sequencing strategy or what part of the genome is targeted. Options include: whole_genome, whole_genome_wga, amplicon, exome, transcriptome, small_rna, chip, targeted, plasmid, other.</td>
+<td>Controlled vocabulary</td>
+<td><code>whole_genome</code></td>
+</tr>
+<tr>
+<td><code>remarks</code></td>
+<td>Additional notes or remarks about the sample, often for internal collection records.</td>
+<td>Text field</td>
+<td><code>"Strain donated by institute X."</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="new-metadata-fields-detailed-information">New Metadata Fields - Detailed Information</h4>
+<p><strong>Library Source (<code>library_source_id</code>)</strong><br />
+This field describes the source material of the DNA/RNA being sequenced:</p>
+<ul>
+<li><code>genomic</code> - DNA extracted from genomic material of an organism</li>
+<li><code>single_cell_genomic</code> - DNA extracted from a single cell</li>
+<li><code>transcriptomic</code> - RNA converted to cDNA for sequencing</li>
+<li><code>single_cell_transcriptomic</code> - RNA converted to cDNA from a single cell</li>
+<li><code>metagenomic</code> - DNA extracted from a mixed community of organisms</li>
+<li><code>viral_rna</code> - Viral RNA genome, sequenced as cDNA</li>
+<li><code>plasmid</code> - Circular plasmid DNA sequenced separately</li>
+<li><code>other</code> - Source material not covered by the above categories</li>
+</ul>
+<p><strong>DNA Input Type (<code>dna_input_type_id</code>)</strong><br />
+This field describes how the DNA/RNA was prepared or amplified before sequencing:</p>
+<ul>
+<li><code>native</code> - Genomic DNA sequenced without amplification</li>
+<li><code>pcr</code> - DNA amplified by PCR without specific locus targeting</li>
+<li><code>amplicon</code> - PCR amplicons targeting specific loci</li>
+<li><code>random_pcr</code> - Random priming followed by PCR amplification</li>
+<li><code>rt_pcr</code> - Reverse transcription followed by PCR amplification of RNA</li>
+<li><code>cDNA</code> - Complementary DNA synthesized from RNA</li>
+<li><code>swga</code> - Selective whole-genome amplification of microbial DNA</li>
+<li><code>mda</code> - Multiple displacement amplification</li>
+<li><code>hybrid_capture</code> - Target enrichment via hybridization probes</li>
+<li><code>probe_capture</code> - Probe-based capture of targeted sequences</li>
+<li><code>chip</code> - DNA fragments enriched by chromatin immunoprecipitation</li>
+<li><code>other</code> - Selection method not covered above</li>
+</ul>
+<p><strong>Target Scope (<code>target_scope_id</code>)</strong><br />
+This field describes the sequencing strategy or what part of the genome is targeted:</p>
+<ul>
+<li><code>whole_genome</code> - Random sequencing across the entire genome</li>
+<li><code>whole_genome_wga</code> - Whole-genome sequencing after amplification</li>
+<li><code>amplicon</code> - Sequencing of PCR amplicons</li>
+<li><code>exome</code> - Sequencing of captured exons</li>
+<li><code>transcriptome</code> - Sequencing of cDNA from RNA</li>
+<li><code>small_rna</code> - Sequencing of small RNAs such as miRNA</li>
+<li><code>chip</code> - Sequencing of DNA fragments from ChIP enrichment</li>
+<li><code>targeted</code> - Sequencing of enriched panels or probe-captured regions</li>
+<li><code>plasmid</code> - Sequencing focused on plasmids or small replicons</li>
+<li><code>other</code> - Strategy not covered above</li>
+</ul>
+<p>A <strong>template CSV file</strong> is available for download: <a href="../assets/full.csv">Download Template</a>.  </p>
+<h4 id="example-metadata-format">Example Metadata Format</h4>
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>species_name</th>
+<th>species_taxid</th>
+<th>year_of_isolation</th>
+<th>country_of_isolation</th>
+<th>geographic_origin</th>
+<th>strain_lineage</th>
+<th>source_id</th>
+<th>host_taxid</th>
+<th>internal_lab_id</th>
+<th>diagnostic_method_id</th>
+<th>library_source_id</th>
+<th>dna_input_type_id</th>
+<th>target_scope_id</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file1.pod5</td>
+<td>DENV</td>
+<td>11053</td>
+<td>2014</td>
+<td>NA</td>
+<td>NA</td>
+<td>ECSA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>viral_rna</td>
+<td>rt_pcr</td>
+<td>transcriptome</td>
+<td>ITM collection</td>
+</tr>
+<tr>
+<td>file2.pod5</td>
+<td>HIV</td>
+<td>11676</td>
+<td>2015</td>
+<td>BE</td>
+<td>NI</td>
+<td>ECSA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>viral_rna</td>
+<td>rt_pcr</td>
+<td>whole_genome</td>
+<td>ITM collection</td>
+</tr>
+<tr>
+<td>file3.pod5</td>
+<td>ZIKV</td>
+<td>64320</td>
+<td>11053</td>
+<td>2015</td>
+<td>BE</td>
+<td>ID</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>viral_rna</td>
+<td>cDNA</td>
+<td>transcriptome</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>file4.pod5</td>
+<td>SARS-CoV-2_A</td>
+<td>2697049</td>
+<td>11060</td>
+<td>2018</td>
+<td>BE</td>
+<td>PE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>viral_rna</td>
+<td>rt_pcr</td>
+<td>whole_genome</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>file5.pod5</td>
+<td>SARS-CoV-2_B</td>
+<td>2697049</td>
+<td>11060</td>
+<td>2018</td>
+<td>BE</td>
+<td>PE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>genomic</td>
+<td>native</td>
+<td>whole_genome</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="upload-interface-in-squidbase">Upload Interface in SquiDBase</h3>
+<p>After logging in to SquiDBase, you can access the <a href="https://squidbase.org/submissions/submit">Submit page</a>.  </p>
+<p>On this page, you will need to:<br />
+1. Fill in your <strong>contact details</strong><br />
+2. Provide a <strong>short description</strong> of your dataset<br />
+3. Upload a <strong>Samplesheet CSV file</strong> containing metadata for your POD5 files  </p>
+<figure>
+<p><img alt="Dataset submission" src="../assets/dataset_submission.png" />  </p>
+<figcaption>
+<p>Dataset submission page in SquiDBase.</p>
+</figcaption>
+</figure>
+<h3 id="uploading-pod5-files">Uploading POD5 Files</h3>
+<p>Below the metadata submission section, you will find an area to upload your <strong>POD5 files</strong>, as shown in the image below.  </p>
+<p>Once both the <strong>CSV metadata file</strong> and the <strong>POD5 files</strong> are uploaded, SquiDBase will perform basic validation checks, such as:  </p>
+<ul>
+<li>Ensuring that all <strong>filenames in the CSV match</strong> the uploaded POD5 files  </li>
+<li>Checking for potential formatting issues  </li>
+</ul>
+<p>If no errors are detected, you can proceed by clicking the <strong>Upload</strong> button.  </p>
+<figure>
+<p><img alt="POD5 upload" src="../assets/upload_pod5.png" /></p>
+<figcaption>
+<p>POD5 upload section.</p>
+</figcaption>
+</figure>
+<h3 id="making-your-data-public">Making Your Data Public</h3>
+<p>Once your data is uploaded, you will have the option to:  </p>
+<ul>
+<li><strong>Immediately make your dataset publicly available</strong>  </li>
+<li><strong>Keep the dataset private</strong> and enable the <strong>"public" toggle</strong> later when you are ready to share it (e.g., after your publication is under peer review)  </li>
+</ul>
+<hr />
+<h2 id="upload-of-mixed-datasets-running-squidpipe">Upload of mixed datasets – running SquiDPipe</h2>
+<p>Many <strong>Nanopore sequencing runs</strong>, particularly those involving barcoded samples with multiple microbial or viral species, <strong>contain mixed species per POD5 file</strong>.  </p>
+<p>To handle this, use <strong>SquiDPipe</strong>, a <strong>Nextflow pipeline</strong> designed to process barcoded runs, including <strong>FASTQ files</strong>. It will:  </p>
+<ul>
+<li>Classify reads based on the <strong>basecalled sequences</strong>  </li>
+<li>Automatically <strong>separate POD5 files</strong> by species</li>
+<li>Output a CSV for uploading to SquiDBase that matches the outputted POD5 filenames</li>
+</ul>
+<p>For instructions on running <strong>SquiDPipe</strong>, visit:<br />
+<a href="https://github.com/Cuypers-Wim/squidpipe"><strong>SquiDPipe GitHub Repository</strong></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
