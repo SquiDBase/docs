@@ -2,9 +2,17 @@ site_name: SquiDBase Docs
 site_url: https://ominous-couscous-q9v464gpw66h9jw4-8000.app.github.dev/docs/
 repo_url: https://github.com/SquiDBase/docs
 
+nav:
+  - Home: index.md
+  - Retrieving data: retrieving_data.md
+  - Uploading data: uploading_data.md
+  - How to cite: citation.md
+
 theme:
   name: material
   logo: assets/logo.png
+  features:
+    - content.code.copy
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
