@@ -4,7 +4,9 @@ If you use SquiDBase or data retrieved from it in your research, please cite our
 
 > Wim L Cuypers, Halil Ceylan, Eline Turcksin, Laura Raes, Nicky de Vrij, Johan Michiels, Sandra Coppens, Tessa de Block, Daan Jansen, Kevin K Ariën, Philippe Selhorst, Koen Vercauteren, Julia M Gauglitz, Wout Bittremieux, Kris Laukens. **SquiDBase: a community resource of raw nanopore data from microbes.** *NAR Genomics and Bioinformatics*, 2026, 8(1), lqaf213. [https://doi.org/10.1093/nargab/lqaf213](https://doi.org/10.1093/nargab/lqaf213)
 
-When you reference a specific dataset, please also cite its unique SquiDBase (SQB) identifier (for example, `SQB000004`) so that others can locate the exact data you used.
+## Citing a specific dataset
+
+When you reuse a particular dataset, also cite its unique SquiDBase (SQB) accession and stable page URL — `https://squidbase.org/submissions/<SQB-ID>`, for example [SQB000004](https://squidbase.org/submissions/SQB000004) — so others can locate the exact data you used.
 
 ## BibTeX
 
@@ -24,41 +26,17 @@ When you reference a specific dataset, please also cite its unique SquiDBase (SQ
 }
 ```
 
-## RIS (EndNote, Zotero, Mendeley)
-
-```ris
-TY  - JOUR
-TI  - SquiDBase: a community resource of raw nanopore data from microbes
-AU  - Cuypers, Wim L
-AU  - Ceylan, Halil
-AU  - Turcksin, Eline
-AU  - Raes, Laura
-AU  - de Vrij, Nicky
-AU  - Michiels, Johan
-AU  - Coppens, Sandra
-AU  - de Block, Tessa
-AU  - Jansen, Daan
-AU  - Ariën, Kevin K
-AU  - Selhorst, Philippe
-AU  - Vercauteren, Koen
-AU  - Gauglitz, Julia M
-AU  - Bittremieux, Wout
-AU  - Laukens, Kris
-JO  - NAR Genomics and Bioinformatics
-PY  - 2026
-VL  - 8
-IS  - 1
-SP  - lqaf213
-DO  - 10.1093/nargab/lqaf213
-UR  - https://doi.org/10.1093/nargab/lqaf213
-ER  -
-```
-
 ## Plain text
 
 ```text
 Cuypers, W. L., Ceylan, H., Turcksin, E., Raes, L., de Vrij, N., Michiels, J., Coppens, S., de Block, T., Jansen, D., Ariën, K. K., Selhorst, P., Vercauteren, K., Gauglitz, J. M., Bittremieux, W., & Laukens, K. (2026). SquiDBase: a community resource of raw nanopore data from microbes. NAR Genomics and Bioinformatics, 8(1), lqaf213. https://doi.org/10.1093/nargab/lqaf213
 ```
+
+## Other formats (RIS, EndNote, RefWorks…)
+
+For RIS, EndNote, RefWorks, and other citation-manager formats, use the **Cite** button on the publisher's article page, which always serves the most up-to-date record:
+
+[Export citation from NAR Genomics and Bioinformatics →](https://academic.oup.com/nargab/article/doi/10.1093/nargab/lqaf213/8417709)
 
 ## Acknowledgements
 
