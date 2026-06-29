@@ -4,9 +4,7 @@ If you use SquiDBase or data retrieved from it in your research, please cite our
 
 > Wim L Cuypers, Halil Ceylan, Eline Turcksin, Laura Raes, Nicky de Vrij, Johan Michiels, Sandra Coppens, Tessa de Block, Daan Jansen, Kevin K Ariën, Philippe Selhorst, Koen Vercauteren, Julia M Gauglitz, Wout Bittremieux, Kris Laukens. **SquiDBase: a community resource of raw nanopore data from microbes.** *NAR Genomics and Bioinformatics*, 2026, 8(1), lqaf213. [https://doi.org/10.1093/nargab/lqaf213](https://doi.org/10.1093/nargab/lqaf213)
 
-## Citing a specific dataset
-
-When you reuse a particular dataset, also cite its unique SquiDBase (SQB) accession and stable page URL — `https://squidbase.org/submissions/<SQB-ID>`, for example [SQB000004](https://squidbase.org/submissions/SQB000004) — so others can locate the exact data you used.
+To reference a specific dataset, also cite its SquiDBase (SQB) accession, e.g. [SQB000004](https://squidbase.org/submissions/SQB000004).
 
 ## BibTeX
 
