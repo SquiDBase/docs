@@ -14,10 +14,13 @@ When you reference a specific dataset, please also cite its unique SquiDBase (SQ
   author  = {Cuypers, Wim L and Ceylan, Halil and Turcksin, Eline and Raes, Laura and de Vrij, Nicky and Michiels, Johan and Coppens, Sandra and de Block, Tessa and Jansen, Daan and Ari{\"e}n, Kevin K and Selhorst, Philippe and Vercauteren, Koen and Gauglitz, Julia M and Bittremieux, Wout and Laukens, Kris},
   journal = {NAR Genomics and Bioinformatics},
   year    = {2026},
+  month   = {03},
   volume  = {8},
   number  = {1},
   pages   = {lqaf213},
-  doi     = {10.1093/nargab/lqaf213}
+  issn    = {2631-9268},
+  doi     = {10.1093/nargab/lqaf213},
+  url     = {https://doi.org/10.1093/nargab/lqaf213}
 }
 ```
 
@@ -55,12 +58,6 @@ ER  -
 
 ```text
 Cuypers, W. L., Ceylan, H., Turcksin, E., Raes, L., de Vrij, N., Michiels, J., Coppens, S., de Block, T., Jansen, D., Ariën, K. K., Selhorst, P., Vercauteren, K., Gauglitz, J. M., Bittremieux, W., & Laukens, K. (2026). SquiDBase: a community resource of raw nanopore data from microbes. NAR Genomics and Bioinformatics, 8(1), lqaf213. https://doi.org/10.1093/nargab/lqaf213
-```
-
-## In-text LaTeX
-
-```latex
-SquiDBase~\cite{Cuypers2026SquiDBase}
 ```
 
 ## Acknowledgements

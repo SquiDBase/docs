@@ -41,4 +41,5 @@ extra_css:
   - stylesheets/extra.css
 markdown_extensions:
   - pymdownx.blocks.caption
+  - pymdownx.superfences
   - tables
