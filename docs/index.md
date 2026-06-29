@@ -11,9 +11,6 @@ Please also review our [Terms & Conditions](https://squidbase.org/policy/terms).
 
 # Acknowledgements & citation
 
+SquiDBase was developed at the University of Antwerp in the [Laukens lab](https://laukenslab.org/), and was published in January 2026 in *NAR Genomics and Bioinformatics* (NARGAB): [https://doi.org/10.1093/nargab/lqaf213](https://doi.org/10.1093/nargab/lqaf213).
 
-SquiDBase was developed at the University of Antwerp in the [Laukens lab](https://laukenslab.org/). 
-
-You can find the team members who contributed to the development, curation, and expansion of SquiDBase on the landing page of our website: [SquiDBase Team](https://squidbase.org/).
-
-SquiDBase was published in January 2026 in *NAR Genomics and Bioinformatics* (NARGAB): [https://doi.org/10.1093/nargab/lqaf213](https://doi.org/10.1093/nargab/lqaf213).
+If you use SquiDBase in your research, please see [How to cite](citation.md) for ready-to-copy BibTeX, RIS, and plain-text citations.
